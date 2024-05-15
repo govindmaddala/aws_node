@@ -1,4 +1,3 @@
-require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -17,6 +16,5 @@ app.get("/home", (req,res)=>{
     res.send({message: "Message from backend"})
 })
 app.listen(port, async () => {
-    await dbConnect()
     console.log(`App is running on ${port}`)
 })
